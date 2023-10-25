@@ -28,11 +28,17 @@ If you want to test your project locally, you can use the following commands:
 # Starts the replica, running in the background
 dfx start --background --clean
 
-# deploy dependencies
-dfx deps deploy
+# pull dependencies
+dfx deps pull
 
 # initialize ii
 dfx deps init internet_identity --argument '(null)'
+
+# deploy dependencies
+dfx deps deploy
+
+# install packages
+npm install
 
 # deploy locally
 npm run deploy:local
