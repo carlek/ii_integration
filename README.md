@@ -26,10 +26,16 @@ If you want to test your project locally, you can use the following commands:
 
 ```bash
 # Starts the replica, running in the background
-dfx start --background
+dfx start --background --clean
 
-# Deploys your canisters to the replica and generates your candid interface
-dfx deploy
+# deploy dependencies
+dfx deps deploy
+
+# initialize ii
+dfx deps init internet_identity --argument '(null)'
+
+# deploy locally
+npm run deploy:local
 ```
 
 Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
